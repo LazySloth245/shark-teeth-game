@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.main-grid {
+  display: grid;
+}
+
+.shark-teeth-image {
+  width: fit-content;
+}
+
+.button-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  text-align: center;
+  margin: 5px;
+}
+
+.title {
+  margin: 16px;
+}
+
+.selected-button {
+  box-shadow: 0px 0px 2px 1px lightskyblue;
+}

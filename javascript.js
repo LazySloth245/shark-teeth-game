@@ -1,22 +1,21 @@
-const totalTeeth = 20;
-let teethIndex = document.querySelector('.teeth-index').innerHTML;
+const buttons = document.querySelectorAll('button');
 
-document.querySelector('.add-button').addEventListener('click', () => {
-  if (teethIndex <=6) {
-    teethIndex++;
-
-    document.querySelector('.teeth-index').innerHTML = teethIndex;
-
-    document.querySelector('.result').innerHTML = (totalTeeth - teethIndex)%4;
+function unselectPreviousButton () {
+  const selectedButton = document.querySelector('.selected-button');
+  if (selectedButton) {
+    selectedButton.classList.remove('selected-button');
   }
+}
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    document.querySelector('img').src = `img/shark-teeth-${index+1}.jpg`;
+    unselectPreviousButton();
+    button.classList.add('selected-button');
+  });
 });
 
-document.querySelector('.minus-button').addEventListener('click', () => {
-  if (teethIndex >=2) {
-    teethIndex--;
-
-    document.querySelector('.teeth-index').innerHTML = teethIndex;
-    
-    document.querySelector('.result').innerHTML = (totalTeeth - teethIndex)%4;
-  }
+document.querySelector('.title').addEventListener('click', () => {
+  document.querySelector('img').src = 'img/shark-teeth.jpg';
+  unselectPreviousButton();
 });

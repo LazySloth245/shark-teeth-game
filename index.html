@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shark Teeth Game</title>
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
 
   <body>
-    <div>
-      <p>The teeth index is counted from right to left, starts from 1.</p>
-      <p>Teeth index:</p>
-      <button class="add-button">+</button>
-      <p class="teeth-index">1</p>
-      <button class="minus-button">-</button>
+    <div class="main-grid">
+      <img class="shark-teeth-image" src="img/shark-teeth.jpg">
+
+      <p class="title">Cavity tooth</p>
+
+      <div class="button-section">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+      </div>
+      
+      <p><span style="color: green;">&#x2714;</span> = sống</p>
+      <p><span style="color: red;">&#x2718;</span> = chếc</p>
     </div>
 
-    <p>First move: <span class="result">3</span></p>
     <script src="javascript.js"></script>
   </body>
 </html>
